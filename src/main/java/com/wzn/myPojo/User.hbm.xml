@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-1-19 17:33:52 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.wzn.myPojo.User" table="h_user">
+        <id name="id" type="int" access="field">
+            <column name="id" />
+            <generator class="native" />  <!-- 主键的生成策略  native：not null auto_increment -->
+        </id>
+        <property name="username" type="java.lang.String" access="field">
+            <column name="username" />
+        </property>
+        <property name="u_age" type="int" access="field">
+            <column name="U_AGE" />
+        </property>
+        <!-- 可以简写如下 -->
+        <property name="sex" type="java.lang.String" access="field" column="sex" />
+    </class>
+</hibernate-mapping>

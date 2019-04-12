@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- 设置方言   就是告诉系统操作的数据库是那种 -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<!-- 数据库连接的4大要素 -->
+		<property name="hibernate.connection.password">1234</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/wzn188</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+		<!-- 辅助性功能 -->
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<!-- 数据表的生成策略    当数据表有的话就可以直接操作，数据库没有的话就自动创建 -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<!-- 绑定映射文件 -->
+		<mapping resource="com/wzn/myPojo/User.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>
